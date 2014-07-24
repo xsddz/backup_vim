@@ -1,0 +1,175 @@
+find_header: checking for float.h... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC conftest.c  -L. -L/usr/lib64 -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby2.0  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <float.h>
+/* end */
+
+--------------------
+
+find_header: checking for ruby.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+/* end */
+
+--------------------
+
+find_header: checking for stdlib.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <stdlib.h>
+/* end */
+
+--------------------
+
+find_header: checking for string.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <string.h>
+/* end */
+
+--------------------
+
+have_header: checking for fcntl.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <fcntl.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/errno.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/errno.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/socket.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/socket.h>
+/* end */
+
+--------------------
+
+have_header: checking for ruby/st.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/st.h>
+/* end */
+
+--------------------
+
+have_header: checking for st.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC  conftest.c -o conftest.i"
+In file included from conftest.c:3:0:
+/usr/include/ruby-2.0.0/ruby/backward/st.h:2:2: warning: #warning use "ruby/st.h" instead of bare "st.h" [-Wcpp]
+ #warning use "ruby/st.h" instead of bare "st.h"
+  ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <st.h>
+/* end */
+
+--------------------
+
+have_library: checking for pthread_create() in -lpthread... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC conftest.c  -L. -L/usr/lib64 -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby2.0 -lpthread  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:57: error: ‘pthread_create’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_create; return 0; }
+                                                         ^
+conftest.c:5:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:5:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_create; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_create; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-2.0.0/x86_64-linux -I/usr/include/ruby-2.0.0/ruby/backward -I/usr/include/ruby-2.0.0 -I.    -fmessage-length=0 -grecord-gcc-switches -fstack-protector -O2 -Wall -D_FORTIFY_SOURCE=2 -funwind-tables -fasynchronous-unwind-tables -g -fPIC conftest.c  -L. -L/usr/lib64 -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby2.0 -lpthread  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:1: warning: implicit declaration of function ‘pthread_create’ [-Wimplicit-function-declaration]
+ int t(void) { pthread_create(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { pthread_create(); return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
