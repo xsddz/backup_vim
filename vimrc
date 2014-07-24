@@ -27,7 +27,7 @@ set helplang=cn         " 帮助系统设置为中文
 
 " 为标签页进行配置，通过ctrl h/l切换标签
 " 使用：
-"     用tabnew filename 在新标签中打开名为filename的文件。
+"     在vim中用:tabnew filename 在新标签中打开名为filename的文件。
 " conf for tabs {
 let mapleader = ','
 nnoremap <C-l> gt
@@ -81,7 +81,7 @@ map <C-f> :NERDTreeToggle<CR>
 
 " ctags的使用（一般系统默认装有ctags，可一直接使用）
 " use of ctage {
-" 用ctags -R命令在当前目录下生成标签索引文件，默认为tags。
+" 在命令行下用ctags -R命令在当前目录下生成标签索引文件，默认为tags。
 " 用vim编辑当前目录下文件是，若不指定tags文件位置，vim会在当前目录下寻找。找到后，可用一下快捷键进行跳转:
 " ctrl-] ：跳转至光标所在对象定义之处
 " ctrl-t ：返回跳转前位置
