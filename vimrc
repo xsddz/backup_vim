@@ -66,8 +66,8 @@ else
     set background=dark
 endif
 colorscheme solarized
-let g:solarized_termcolors=256
-let g:solarized_termtrans = 1
+let g:solarized_termcolors=256   " 当出现颜色偏差是，打开该选项
+let g:solarized_termtrans = 1    " 若已将终端背景设为透明，想继续保持透明效果，打开该选项
 "}
 
 
