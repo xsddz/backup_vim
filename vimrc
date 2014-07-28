@@ -7,9 +7,18 @@ set bs=2                " 在insert模式下用退格键删除
 set showmatch           " 代码匹配
 set laststatus=2        " 总是显示状态行
 
+set autoindent          " 开启自动缩进功能
+" set cindent             " 开启 C 语言缩进功能，默认关闭
+set smartindent         " 开启对C语言等类似语言的智能缩进功能，
+                        " 较cindent出色，且在cindent关闭状态下有效，
+                        " 配合autoindent使用
+
 set expandtab           " 以下三个配置配合使用，设置tab和缩进空格数
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=8
+set tabstop=8
+
+" set textwidth=78        " 设置一行允许插入的最大字符数，0值表示禁用此功能
+" set linebreak           " 整词换行
 
 set cursorline          " 为光标所在行添加下划线
 set number              " 显示行号
@@ -19,6 +28,7 @@ set fileencodings=utf-8,gbk   " 使用utf-8或gbk打开文件
 
 set ignorecase          " 检索时忽略大小写
 set hls                 " 检索时高亮显示匹配项
+set incsearch           " 增量查找，会随着输入字符数而动态显示当前匹配字符
 set helplang=cn         " 帮助系统设置为中文
 " set foldmethod=syntax  "代码折叠
 
@@ -57,7 +67,7 @@ else
 endif
 colorscheme solarized
 let g:solarized_termcolors=256
-" let g:solarized_termtrans = 1
+let g:solarized_termtrans = 1
 "}
 
 
