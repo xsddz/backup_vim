@@ -1,87 +1,106 @@
-syn on                  " è¯­æ³•æ”¯æŒ
+set nocompatible  " ½ûÓÃvi¼æÈİÄ£Ê½
+
+" autocmd! bufwritepost _vimrc source %   " ×Ô¶¯¼ÓÔØÅäÖÃÎÄ¼ş£¬µ«ÓÃvimĞŞ¸ÄÅäÖÃÎÄ¼ş²¢±£´æÊ±
 
 "common conf {{
 
-set ai                  " è‡ªåŠ¨ç¼©è¿›
-set bs=2                " åœ¨insertæ¨¡å¼ä¸‹ç”¨é€€æ ¼é”®åˆ é™¤
-set showmatch           " ä»£ç åŒ¹é…
-set laststatus=2        " æ€»æ˜¯æ˜¾ç¤ºçŠ¶æ€è¡Œ
+set helplang=cn         " °ïÖúÏµÍ³ÉèÖÃÎªÖĞÎÄ£¬ÏÂÔØÖĞÎÄ°ïÖú°ü°²×°ºó£¬²Å»áÓĞĞ§
 
-set autoindent          " å¼€å¯è‡ªåŠ¨ç¼©è¿›åŠŸèƒ½
-" set cindent             " å¼€å¯ C è¯­è¨€ç¼©è¿›åŠŸèƒ½ï¼Œé»˜è®¤å…³é—­
-set smartindent         " å¼€å¯å¯¹Cè¯­è¨€ç­‰ç±»ä¼¼è¯­è¨€çš„æ™ºèƒ½ç¼©è¿›åŠŸèƒ½ï¼Œ
-                        " è¾ƒcindentå‡ºè‰²ï¼Œä¸”åœ¨cindentå…³é—­çŠ¶æ€ä¸‹æœ‰æ•ˆï¼Œ
-                        " é…åˆautoindentä½¿ç”¨
+set fileencodings=utf-8,gbk   " Ê¹ÓÃutf-8»ògbk´ò¿ªÎÄ¼ş
 
-set expandtab           " ä»¥ä¸‹ä¸‰ä¸ªé…ç½®é…åˆä½¿ç”¨ï¼Œè®¾ç½®tabå’Œç¼©è¿›ç©ºæ ¼æ•°
-set shiftwidth=8
-set tabstop=8
+if has('gui_running')
+    set guifont=Consolas:h9:cANSI   " ÉèÖÃ×ÖÌå
+else
+    set t_Co=256
+endif
 
-" set textwidth=78        " è®¾ç½®ä¸€è¡Œå…è®¸æ’å…¥çš„æœ€å¤§å­—ç¬¦æ•°ï¼Œ0å€¼è¡¨ç¤ºç¦ç”¨æ­¤åŠŸèƒ½
-" set linebreak           " æ•´è¯æ¢è¡Œ
+syn on                  " Óï·¨Ö§³Ö
 
-set cursorline          " ä¸ºå…‰æ ‡æ‰€åœ¨è¡Œæ·»åŠ ä¸‹åˆ’çº¿
-set number              " æ˜¾ç¤ºè¡Œå·
-set autoread            " æ–‡ä»¶åœ¨vimä¹‹å¤–ä¿®æ”¹è¿‡ï¼Œè‡ªåŠ¨é‡æ–°è¯»å…¥
+set ai                  " ×Ô¶¯Ëõ½ø
+set bs=2                " ÔÚinsertÄ£Ê½ÏÂÓÃÍË¸ñ¼üÉ¾³ı
+set showmatch           " ´úÂëÆ¥Åä
+set laststatus=2        " ×ÜÊÇÏÔÊ¾×´Ì¬ĞĞ
 
-set fileencodings=utf-8,gbk   " ä½¿ç”¨utf-8æˆ–gbkæ‰“å¼€æ–‡ä»¶
+set autoindent          " ¿ªÆô×Ô¶¯Ëõ½ø¹¦ÄÜ
+" set cindent             " ¿ªÆô C ÓïÑÔËõ½ø¹¦ÄÜ£¬Ä¬ÈÏ¹Ø±Õ
+set smartindent         " ¿ªÆô¶ÔCÓïÑÔµÈÀàËÆÓïÑÔµÄÖÇÄÜËõ½ø¹¦ÄÜ£¬
+                        " ½Ïcindent³öÉ«£¬ÇÒÔÚcindent¹Ø±Õ×´Ì¬ÏÂÓĞĞ§£¬
+                        " ÅäºÏautoindentÊ¹ÓÃ
 
-set ignorecase          " æ£€ç´¢æ—¶å¿½ç•¥å¤§å°å†™
-set hls                 " æ£€ç´¢æ—¶é«˜äº®æ˜¾ç¤ºåŒ¹é…é¡¹
-set incsearch           " å¢é‡æŸ¥æ‰¾ï¼Œä¼šéšç€è¾“å…¥å­—ç¬¦æ•°è€ŒåŠ¨æ€æ˜¾ç¤ºå½“å‰åŒ¹é…å­—ç¬¦
-set helplang=cn         " å¸®åŠ©ç³»ç»Ÿè®¾ç½®ä¸ºä¸­æ–‡
-" set foldmethod=syntax  "ä»£ç æŠ˜å 
+set expandtab           " ÒÔÏÂÈı¸öÅäÖÃÅäºÏÊ¹ÓÃ£¬ÉèÖÃtabºÍËõ½ø¿Õ¸ñÊı
+set shiftwidth=4
+set tabstop=4
+
+if has('gui_running')
+    set colorcolumn=80      " ÔÚµÚ80¸ö×Ö·û´¦ÏÔÊ¾´¹Ö±½çÏŞ
+endif
+" set textwidth=78        " ÉèÖÃÒ»ĞĞÔÊĞí²åÈëµÄ×î´ó×Ö·ûÊı£¬0Öµ±íÊ¾½ûÓÃ´Ë¹¦ÄÜ
+" set linebreak           " Õû´Ê»»ĞĞ
+
+set cursorline          " Îª¹â±êËùÔÚĞĞÌí¼ÓÏÂ»®Ïß
+set number              " ÏÔÊ¾ĞĞºÅ
+set autoread            " ÎÄ¼şÔÚvimÖ®ÍâĞŞ¸Ä¹ı£¬×Ô¶¯ÖØĞÂ¶ÁÈë
+
+set ignorecase          " ¼ìË÷Ê±ºöÂÔ´óĞ¡Ğ´
+set hls                 " ¼ìË÷Ê±¸ßÁÁÏÔÊ¾Æ¥ÅäÏî
+set incsearch           " ÔöÁ¿²éÕÒ£¬»áËæ×ÅÊäÈë×Ö·ûÊı¶ø¶¯Ì¬ÏÔÊ¾µ±Ç°Æ¥Åä×Ö·û
+
+" set foldmethod=syntax  "´úÂëÕÛµş
+
+filetype plugin indent on   " ´ò¿ªÎÄ¼şÀàĞÍ¼ì²â
 
 "}}
 
 
-" ä¸ºæ ‡ç­¾é¡µè¿›è¡Œé…ç½®ï¼Œé€šè¿‡ctrl h/låˆ‡æ¢æ ‡ç­¾
-" ä½¿ç”¨ï¼š
-"     åœ¨vimä¸­ç”¨:tabnew filename åœ¨æ–°æ ‡ç­¾ä¸­æ‰“å¼€åä¸ºfilenameçš„æ–‡ä»¶ã€‚
-" conf for tabs {
+" Îª±êÇ©Ò³½øĞĞÅäÖÃ£¬Í¨¹ıctrl h/lÇĞ»»±êÇ©
+" Ê¹ÓÃ£º
+"     ÔÚvimÖĞÓÃ:tabnew filename ÔÚĞÂ±êÇ©ÖĞ´ò¿ªÃûÎªfilenameµÄÎÄ¼ş¡£
+" conf for tabs {{
 let mapleader = ','
 nnoremap <C-l> gt
 nnoremap <C-h> gT
 nnoremap <leader>t : tabe<CR>
-"}
+"}}
 
 
-" conf for plugins {{
+" conf for plugins {{{
 
-" pathogenæ˜¯vimç”¨æ¥ç®¡ç†æ’ä»¶çš„æ’ä»¶
+" pathogenÊÇvimÓÃÀ´¹ÜÀí²å¼şµÄ²å¼ş
 " site: https://github.com/tpope/vim-pathogen
 " pathogen {
-call pathogen#infect()
+execute pathogen#infect()
 "}
 
 
-" è®¾ç½®é…è‰²ä¸ºsilarzed
+" ÉèÖÃÅäÉ«Îªsilarzed
 " site: http://ethanschoonover.com/solarized/vim-colors-solarized
 " conf for vim-color-silarzed {
 syntax enable
-" set background=dark
 if has('gui_running')
-    set background=light
-else
     set background=dark
+    " set background=light
+else
+    let g:solarized_termcolors=256
+    let g:solarized_termtrans=1
+    set background=dark
+    " set background=light
 endif
 colorscheme solarized
-let g:solarized_termcolors=256   " å½“å‡ºç°é¢œè‰²åå·®æ˜¯ï¼Œæ‰“å¼€è¯¥é€‰é¡¹
-let g:solarized_termtrans = 1    " è‹¥å·²å°†ç»ˆç«¯èƒŒæ™¯è®¾ä¸ºé€æ˜ï¼Œæƒ³ç»§ç»­ä¿æŒé€æ˜æ•ˆæœï¼Œæ‰“å¼€è¯¥é€‰é¡¹
+let g:solarized_contrast  =   "high"
+let g:solarized_visibility =  "high"
 "}
 
 
-" çŠ¶æ€æ çš„é…ç½®
+" ×´Ì¬À¸µÄÅäÖÃ
 " site: https://github.com/Lokaltog/vim-powerline
 " conf for powerline {
-set guifont=PowerlineSymbols\ for\ Powerline
-set nocompatible
-set t_Co=256
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
 let g:Powerline_symbols = 'fancy'
 "}
 
 
-" ç”¨æ¥æ˜¾ç¤ºç›®å½•æ ‘ç»“æ„
+" ÓÃÀ´ÏÔÊ¾Ä¿Â¼Ê÷½á¹¹
 " site: https://github.com/scrooloose/nerdtree
 " conf for NERDTree {
 map <C-f> :NERDTreeToggle<CR>
@@ -89,60 +108,58 @@ map <C-f> :NERDTreeToggle<CR>
 
 
 
-" ctagsçš„ä½¿ç”¨ï¼ˆä¸€èˆ¬ç³»ç»Ÿé»˜è®¤è£…æœ‰ctagsï¼Œå¯ä¸€ç›´æ¥ä½¿ç”¨ï¼‰
+" ctagsµÄÊ¹ÓÃ£¨Ò»°ãÏµÍ³Ä¬ÈÏ×°ÓĞctags£¬¿ÉÒ»Ö±½ÓÊ¹ÓÃ£©
 " use of ctage {
-" åœ¨å‘½ä»¤è¡Œä¸‹ç”¨ctags -Rå‘½ä»¤åœ¨å½“å‰ç›®å½•ä¸‹ç”Ÿæˆæ ‡ç­¾ç´¢å¼•æ–‡ä»¶ï¼Œé»˜è®¤ä¸ºtagsã€‚
-" ç”¨vimç¼–è¾‘å½“å‰ç›®å½•ä¸‹æ–‡ä»¶æ˜¯ï¼Œè‹¥ä¸æŒ‡å®štagsæ–‡ä»¶ä½ç½®ï¼Œvimä¼šåœ¨å½“å‰ç›®å½•ä¸‹å¯»æ‰¾ã€‚æ‰¾åˆ°åï¼Œå¯ç”¨ä¸€ä¸‹å¿«æ·é”®è¿›è¡Œè·³è½¬:
-" ctrl-] ï¼šè·³è½¬è‡³å…‰æ ‡æ‰€åœ¨å¯¹è±¡å®šä¹‰ä¹‹å¤„
-" ctrl-t ï¼šè¿”å›è·³è½¬å‰ä½ç½®
-" [n]ctrl-t ï¼š[n]ä¸ºæ•°å­—ï¼Œå‘å›è·³è½¬næ¬¡ï¼›ç­‰ä»·äºé‡å¤næ¬¡ctrl-tæ“ä½œ
+" ÔÚÃüÁîĞĞÏÂÓÃctags -RÃüÁîÔÚµ±Ç°Ä¿Â¼ÏÂÉú³É±êÇ©Ë÷ÒıÎÄ¼ş£¬Ä¬ÈÏÎªtags¡£
+" ÓÃvim±à¼­µ±Ç°Ä¿Â¼ÏÂÎÄ¼şÊÇ£¬Èô²»Ö¸¶¨tagsÎÄ¼şÎ»ÖÃ£¬vim»áÔÚµ±Ç°Ä¿Â¼ÏÂÑ°ÕÒ¡£ÕÒµ½ºó£¬¿ÉÓÃÒ»ÏÂ¿ì½İ¼ü½øĞĞÌø×ª:
+" ctrl-] £ºÌø×ªÖÁ¹â±êËùÔÚ¶ÔÏó¶¨ÒåÖ®´¦
+" ctrl-t £º·µ»ØÌø×ªÇ°Î»ÖÃ
+" [n]ctrl-t £º[n]ÎªÊı×Ö£¬Ïò»ØÌø×ªn´Î£»µÈ¼ÛÓÚÖØ¸´n´Îctrl-t²Ù×÷
 "}
 
-" taglistçš„é…ç½®
+" taglistµÄÅäÖÃ
 " site: https://github.com/vim-scripts/taglist.vim.git
-" ä½¿ç”¨ï¼š
-"     å½“ä½¿ç”¨vimæ‰“å¼€æŸä¸ªç¨‹åºæ–‡ä»¶æ—¶ï¼Œæˆ‘ä»¬å¯ä»¥ç”¨:Tlistæ‰“å¼€taglistçª—å£ï¼Œå¦‚æœè¯¥ç¨‹åºå…·å¤‡ç±»ã€æ¥å£ã€å±æ€§ç­‰å…ƒç´ ï¼Œå°±ä¼šåœ¨taglistçª—å£æ˜¾ç¤ºå‡ºæ¥ã€‚
+" Ê¹ÓÃ£º
+"     µ±Ê¹ÓÃvim´ò¿ªÄ³¸ö³ÌĞòÎÄ¼şÊ±£¬ÎÒÃÇ¿ÉÒÔÓÃ:Tlist´ò¿ªtaglist´°¿Ú£¬Èç¹û¸Ã³ÌĞò¾ß±¸Àà¡¢½Ó¿Ú¡¢ÊôĞÔµÈÔªËØ£¬¾Í»áÔÚtaglist´°¿ÚÏÔÊ¾³öÀ´¡£
 " conf for taglist {
-let Tlist_Show_One_File = 1            "åªæ˜¾ç¤ºå½“å‰æ–‡ä»¶çš„taglistï¼Œé»˜è®¤æ˜¯æ˜¾ç¤ºå¤šä¸ª
-let Tlist_Exit_OnlyWindow = 1          "å¦‚æœtaglistæ˜¯æœ€åä¸€ä¸ªçª—å£ï¼Œåˆ™é€€å‡ºvim
-let Tlist_Use_Right_Window = 1         "åœ¨å³ä¾§çª—å£ä¸­æ˜¾ç¤ºtaglist
-let Tlist_GainFocus_On_ToggleOpen = 1  "æ‰“å¼€taglistæ—¶ï¼Œå…‰æ ‡ä¿ç•™åœ¨taglistçª—å£
-let Tlist_Ctags_Cmd='/usr/bin/ctags'  "è®¾ç½®ctagså‘½ä»¤çš„ä½ç½®
-nnoremap <leader>tl : Tlist<CR>        "è®¾ç½®å…³é—­å’Œæ‰“å¼€taglistçª—å£çš„å¿«æ·é”®
+let Tlist_Show_One_File = 1            "Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄtaglist£¬Ä¬ÈÏÊÇÏÔÊ¾¶à¸ö
+let Tlist_Exit_OnlyWindow = 1          "Èç¹ûtaglistÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³övim
+let Tlist_Use_Right_Window = 1         "ÔÚÓÒ²à´°¿ÚÖĞÏÔÊ¾taglist
+let Tlist_GainFocus_On_ToggleOpen = 1  "´ò¿ªtaglistÊ±£¬¹â±ê±£ÁôÔÚtaglist´°¿Ú
+let Tlist_Auto_Update = 1              "×Ô¶¯¸üĞÂTlist
+" let Tlist_Ctags_Cmd='D:\Program Files (x86)\Vim\vim74\ctags.exe'  "ÉèÖÃctagsÃüÁîµÄÎ»ÖÃ
+nnoremap <leader>tl : Tlist<CR>        "ÉèÖÃ¹Ø±ÕºÍ´ò¿ªtaglist´°¿ÚµÄ¿ì½İ¼ü
 "}
 
 
-" å¿«é€Ÿæ–‡ä»¶æµè§ˆçš„æ’ä»¶é…ç½®(è¯¥æ’ä»¶éœ€æ”¯æŒrubyæ‰©å±•ï¼‰
-" site: https://wincent.com/products/command-t
-" conf for command-t {
-"1.å®‰è£…
-" ä»ä¸‹è½½åœ°å€ä¸‹è½½æœ€æ–°ç‰ˆæœ¬çš„vbaæ–‡ä»¶ï¼Œç›®å‰æœ€æ–°ç‰ˆæœ¬æ˜¯1.4ï¼Œæ‰€ä»¥å®‰è£…æ–‡ä»¶æ˜¯command-t-1.4.vba
-" åœ¨~/.vim/bundleç›®å½•ä¸‹åˆ›å»ºæ–‡ä»¶å¤¹command-t
-" ç”¨Vimæ‰“å¼€command-t-1.4.vba
-" æ‰§è¡Œ:UseVimball ~/.vim/bundle/command-t
-" 
-" è¿›å…¥rubyç›®å½•ä¸‹ç¼–è¯‘Cæ‰©å±•
-" 
-"    cd ~/.vim/bundle/command-t/ruby/command-t
-"    ruby extconf.rb
-"    make
-"2.ä½¿ç”¨
-" è¾“å…¥:CommandTå¯è¿›å…¥æ–‡ä»¶å¿«é€Ÿå®šä½åŠŸèƒ½ï¼Œä»¥ä¸‹æ˜¯å¿«æ·é”®
-" 
-"     ctrl+j/k ä¸Šä¸‹é€‰æ‹©æ–‡ä»¶ï¼Œé€‰ä¸­åå›è½¦æ‰“å¼€æ–‡ä»¶
-"     ctrl+t ä»¥tabæ–¹å¼æ‰“å¼€æ–‡ä»¶
-"     ctrl+s/v å¯ä»¥æ°´å¹³æˆ–å‚ç›´åˆ†å‰²çª—å£æ‰“å¼€æ–‡ä»¶
-"     ctrl+c é€€å‡ºè¯¥æ¨¡å¼
-" 
-" è¯¥æ’ä»¶è¿˜æœ‰ä¸ªå¸¸ç”¨å‘½ä»¤ï¼Œ:CommandTBufferï¼Œå¯ä»¥æµè§ˆç¼“å†²åŒºçš„æ–‡ä»¶ï¼Œå¹¶é‡æ–°æ‰“å¼€ã€‚æ“ä½œæ–¹å¼åŒä¸Šã€‚
-"}
-
-
-" ä¹¦ç­¾é…ç½®
+" ÊéÇ©ÅäÖÃ
 " site: http://www.vim.org/scripts/download_script.php?src_id=4700
 " use of visualmark {
-" ä½¿ç”¨vimæ‰“å¼€ä¸€ä¸ªæ–‡ä»¶ï¼Œä½¿ç”¨å¿«æ·é”®mmè®¾ç½®ä¹¦ç­¾ï¼ˆå†æ¬¡ä½¿ç”¨ï¼Œå–æ¶ˆä¹¦ç­¾ï¼‰ï¼Œé€šè¿‡F2å’Œshift+F2å¯ä»¥ä¸Šä¸‹åˆ‡æ¢æµè§ˆã€‚
+" Ê¹ÓÃvim´ò¿ªÒ»¸öÎÄ¼ş£¬Ê¹ÓÃ¿ì½İ¼ümmÉèÖÃÊéÇ©£¨ÔÙ´ÎÊ¹ÓÃ£¬È¡ÏûÊéÇ©£©£¬Í¨¹ıF2ºÍshift+F2¿ÉÒÔÉÏÏÂÇĞ»»ä¯ÀÀ¡£
 "}
 
-"}}
+
+" emmetÅäÖÃ
+" site: https://github.com/mattn/emmet-vim
+" use of emmet {
+" }
+
+
+" markdownÅäÖÃ
+" site: https://github.com/plasticboy/vim-markdown
+" conf for markdown {{
+let g:vim_markdown_folding_disabled=1
+" use of markdown {
+" - `]]`: go to next header. `<Plug>(Markdown_MoveToNextHeader)`
+" - `[[`: go to previous header. Contrast with `]c`. `<Plug>(Markdown_MoveToPreviousHeader)`
+" - `][`: go to next sibling header if any. `<Plug>(Markdown_MoveToNextSiblingHeader)`
+" - `[]`: go to previous sibling header if any. `<Plug>(Markdown_MoveToPreviousSiblingHeader)`
+" - `]c`: go to Current header. `<Plug>(Markdown_MoveToCurHeader)`
+" - `]u`: go to parent header (Up). `<Plug>(Markdown_MoveToParentHeader)
+" }
+" }}
+
+
+"}}}
+
 
