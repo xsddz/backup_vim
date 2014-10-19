@@ -108,7 +108,7 @@ map <C-f> :NERDTreeToggle<CR>
 
 
 
-" ctags的使用（一般系统默认装有ctags，可一直接使用）
+" ctags的使用（一般系统默认装有ctags，可直接使用）
 " use of ctage {
 " 在命令行下用ctags -R命令在当前目录下生成标签索引文件，默认为tags。
 " 用vim编辑当前目录下文件是，若不指定tags文件位置，vim会在当前目录下寻找。找到后，可用一下快捷键进行跳转:

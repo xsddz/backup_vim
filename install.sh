@@ -29,6 +29,6 @@ git submodule update --init --recursive
 cp -f vimrc ~/.vimrc
 cp -rf vim ~/.vim
 
-echo '[ok]'
+echo '[安装完成]'
 
 
