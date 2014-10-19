@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+# 
 echo -n '安装中........'
 
 back_path=`pwd`
@@ -18,8 +19,13 @@ fi
 mv -f .vimrc $vimf
 mv -f .vim $vimd
 
-# 安装
+
 cd $back_path
+
+# clone子项目
+git submodule update --init --recursive
+
+# 安装
 cp -f vimrc ~/.vimrc
 cp -rf vim ~/.vim
 
