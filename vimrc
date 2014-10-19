@@ -118,7 +118,7 @@ map <C-f> :NERDTreeToggle<CR>
 "}
 
 " taglist的配置
-" site: https://github.com/vim-scripts/taglist.vim.git
+" site: https://github.com/vim-scripts/taglist.vim
 " 使用：
 "     当使用vim打开某个程序文件时，我们可以用:Tlist打开taglist窗口，如果该程序具备类、接口、属性等元素，就会在taglist窗口显示出来。
 " conf for taglist {
