@@ -1,53 +1,62 @@
 set nocompatible  " 禁用vi兼容模式
 
+let g:iswindows=0
+let g:islinux=0
+if (has("win32") || has ("win64") || has("win95") || has("win16"))
+    let g:iswindows=1
+else
+    let g:islinux=1
+endif
+
+if has('gui_running')
+    let g:isGUI=1
+else
+    let g:isGUI=0
+endif
+
 " autocmd! bufwritepost _vimrc source %   " 自动加载配置文件，但用vim修改配置文件并保存时
 
 "common conf {{
 
 set helplang=cn         " 帮助系统设置为中文，下载中文帮助包安装后，才会有效
 
+set encoding=utf-8      " 设置vim内部编码
+set fileencoding=utf-8  " 设置当前文件编码
 set fileencodings=utf-8,gbk   " 使用utf-8或gbk打开文件
 
-if has('gui_running')
+filetype plugin indent on   " 打开文件类型检测
+
+if g:isGUI
     set guifont=Consolas:h9:cANSI   " 设置字体
+    set colorcolumn=80      " 在第80个字符处显示垂直界限
 else
-    set t_Co=256
+    set t_Co=256        " 终端模式下，设置256色
 endif
+" set textwidth=78        " 设置一行允许插入的最大字符数，0值表示禁用此功能
+" set linebreak           " 整词换行
+set expandtab           " 以下三个配置配合使用，设置tab和缩进空格数
+set tabstop=4
+set shiftwidth=4
 
-syn on                  " 语法支持
 
-set ai                  " 自动缩进
 set bs=2                " 在insert模式下用退格键删除
-set showmatch           " 代码匹配
-set laststatus=2        " 总是显示状态行
+set number              " 显示行号
+set autoread            " 文件在vim之外修改过，自动重新读入
+set cursorline          " 为光标所在行添加下划线
 
+syntax on               " 语法支持
+set showmatch           " 代码匹配
 set autoindent          " 开启自动缩进功能
 " set cindent             " 开启 C 语言缩进功能，默认关闭
 set smartindent         " 开启对C语言等类似语言的智能缩进功能，
                         " 较cindent出色，且在cindent关闭状态下有效，
                         " 配合autoindent使用
 
-set expandtab           " 以下三个配置配合使用，设置tab和缩进空格数
-set shiftwidth=4
-set tabstop=4
-
-if has('gui_running')
-    set colorcolumn=80      " 在第80个字符处显示垂直界限
-endif
-" set textwidth=78        " 设置一行允许插入的最大字符数，0值表示禁用此功能
-" set linebreak           " 整词换行
-
-set cursorline          " 为光标所在行添加下划线
-set number              " 显示行号
-set autoread            " 文件在vim之外修改过，自动重新读入
-
-set ignorecase          " 检索时忽略大小写
 set hls                 " 检索时高亮显示匹配项
+set ignorecase          " 检索时忽略大小写
 set incsearch           " 增量查找，会随着输入字符数而动态显示当前匹配字符
 
 " set foldmethod=syntax  "代码折叠
-
-filetype plugin indent on   " 打开文件类型检测
 
 "}}
 
@@ -75,27 +84,24 @@ execute pathogen#infect()
 " 设置配色为silarzed
 " site: http://ethanschoonover.com/solarized/vim-colors-solarized
 " conf for vim-color-silarzed {
-syntax enable
-if has('gui_running')
+" set background=light
+if g:isGUI
     set background=dark
-    " set background=light
 else
     let g:solarized_termcolors=256
     let g:solarized_termtrans=1
     set background=dark
-    " set background=light
 endif
-colorscheme solarized
 let g:solarized_contrast  =   "high"
 let g:solarized_visibility =  "high"
+colorscheme solarized
 "}
 
 
 " 状态栏的配置
 " site: https://github.com/Lokaltog/vim-powerline
 " conf for powerline {
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
+set laststatus=2        " 总是显示状态行
 let g:Powerline_symbols = 'fancy'
 "}
 
