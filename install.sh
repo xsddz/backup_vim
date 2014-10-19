@@ -2,7 +2,7 @@
 
 
 # 
-echo -n '安装中........'
+echo '安装中........'
 
 back_path=`pwd`
 vimf='vimrc_back'
@@ -13,7 +13,7 @@ cd ~
 if [ -f "$vimf" ]; then
     rm -f $vimf
 fi
-if [ -f "$vimd" ]; then
+if [ -d "$vimd" ]; then
     rm -rf $vimd
 fi
 mv -f .vimrc $vimf
