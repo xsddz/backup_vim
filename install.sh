@@ -1,7 +1,9 @@
 #!/bin/bash
-
-
+# Auther: ssir
+# Source: https://github.com/ssir/backup_vim
 # 
+
+
 echo '安装中........'
 
 back_path=`pwd`
@@ -26,8 +28,8 @@ cd $back_path
 git submodule update --init --recursive
 
 # 安装
-cp -f vimrc ~/.vimrc
-cp -rf vim ~/.vim
+cp -f setting/_vimrc ~/.vimrc
+cp -rf setting/vim_linux ~/.vim
 
 echo '[安装完成]'
 
