@@ -34,7 +34,7 @@
 
     - 将 others 目录下 ctags58.zip 文件中 ctags.exe 文件拷贝到 gvim 安装目录 “C:\Program Files (x86)\Vim\vim74”中。
 
-+ 安装完成后，打开 [vim | gvim]，运行 `:Helptags`，生成插件的帮助文档。
+安装完成后，打开 [vim | gvim]，运行 `:Helptags`，生成插件的帮助文档。
 
 
 ### 效果截图
