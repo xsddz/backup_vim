@@ -99,12 +99,12 @@ endif
     " silarzed主题配置
     " site: http://ethanschoonover.com/solarized/vim-colors-solarized
     " conf for vim-color-silarzed {{
-        " set background=light
-        set background=dark
         if g:isGUI
+            set background=dark
             let g:solarized_termtrans=0
         else
-            let g:solarized_termtrans=1 " 当终端使用透明效果时，将该值置为1，来采用终端的透明设置
+            set background=light
+            " let g:solarized_termtrans=1 " 当终端使用透明效果时，将该值置为1，来采用终端的透明设置
             let g:solarized_termcolors=256
         endif
         let g:solarized_contrast="high"
