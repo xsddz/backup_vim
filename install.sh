@@ -1,5 +1,5 @@
 #!/bin/bash
-# Auther: ssir
+# Auther: dingzhihao
 # Source: https://github.com/ssir/backup_vim
 # 
 
@@ -25,11 +25,12 @@ mv -f .vim $vimd
 cd $back_path
 
 # clone子项目
-git submodule update --init --recursive
+# git submodule update --init --recursive
 
 # 安装
 cp -f setting/_vimrc ~/.vimrc
-cp -rf setting/vim_linux ~/.vim
+# cp -rf setting/vim_linux ~/.vim
+cp -rf setting/vimfiles_win ~/.vim
 
 echo '[安装完成]'
 
